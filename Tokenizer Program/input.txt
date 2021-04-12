@@ -1,0 +1,69 @@
+
+
+using System;
+
+namespace Coding
+{
+    class Program
+    {
+
+        static void Main()
+        {
+
+            greedyChangeMaking();
+
+
+        }
+
+
+        static void greedyChangeMaking() {
+
+            double [] currency = { 5.0, 1.0, 0.25, 0.10, 0.05, 0.01 };
+
+            Console.WriteLine("Enter your money: ");
+
+            double money = Convert.ToDouble(Console.ReadLine());
+
+            while (money >= currency[currency.Length -1])
+
+            {
+
+                if (money >= currency[0]) {
+                    money -= currency[0];
+                    Console.WriteLine("You picked currency : " + currency[0]);
+
+                } else if (money >= currency[1]) {
+                    money -= currency[1];
+                    Console.WriteLine("You picked currency : " + currency[1]);
+                } else if (money >= currency[2]) {
+                    money -= currency[2];
+                    Console.WriteLine("You picked currency : " + currency[2]);
+
+                } else if (money >= currency[3]) {
+                    money -= currency[3];
+                    Console.WriteLine("You picked currency : " + currency[3]);
+
+                } else if (money >= currency[4]) {
+                    money -= currency[4];
+                    Console.WriteLine("You picked currency : " + currency[4]);
+
+                } else
+                    money -= currency[5];
+                    Console.WriteLine("You picked currency : " + currency[5]);
+
+            }
+
+        }
+
+        /* I was thinking how time complexity can be computed, another version in stackOverFlow made it much easier, and computed so easily.
+            //So, when judging about time compleixties, maybe we need to better represent of the alogrihm? How to know that a representation of an algorithm is best/optimal?
+            Is there some sort of proofs?
+            Ste 
+        */ 
+
+
+
+    }
+
+
+}

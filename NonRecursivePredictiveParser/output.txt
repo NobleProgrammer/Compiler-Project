@@ -1,0 +1,52 @@
+Left most derivation for arithmetic expression: id * ( id + id ) $
+E -> T E'
+T -> F T'
+F -> id
+T' -> * F T'
+F -> ( E )
+E -> T E'
+T -> F T'
+F -> id
+T' -> NULL
+E' -> + T E'
+T -> F T'
+F -> id
+T' -> NULL
+E' -> NULL
+T' -> NULL
+E' -> NULL
+Parsing successfully halts.
+-------------------------------
+Left most derivation for arithmetic expression: ( id + id ) * id $
+E -> T E'
+T -> F T'
+F -> ( E )
+E -> T E'
+T -> F T'
+F -> id
+T' -> NULL
+E' -> + T E'
+T -> F T'
+F -> id
+T' -> NULL
+E' -> NULL
+T' -> * F T'
+F -> id
+T' -> NULL
+E' -> NULL
+Parsing successfully halts.
+-------------------------------
+Left most derivation for arithmetic expression: id + id * id $
+E -> T E'
+T -> F T'
+F -> id
+T' -> NULL
+E' -> + T E'
+T -> F T'
+F -> id
+T' -> * F T'
+F -> id
+T' -> NULL
+E' -> NULL
+Parsing successfully halts.
+-------------------------------
